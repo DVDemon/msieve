@@ -19,7 +19,7 @@ set_target_properties(${MSIEVE_BINARY} PROPERTIES CXX_STANDARD 17 CXX_STANDARD_R
 
 #factor base
 SET (FB_BINARY "factor_base")
-add_executable(${FB_BINARY} main.cpp )
+add_executable(${FB_BINARY} factor_base.cpp )
 target_include_directories(${FB_BINARY} PRIVATE "${CMAKE_BINARY_DIR}")
 target_compile_options(${FB_BINARY} PRIVATE -Wall -Wextra -pedantic -Werror )
 target_link_libraries(${FB_BINARY} PRIVATE ${CMAKE_THREAD_LIBS_INIT} ${Boost_LIBRARIES})
