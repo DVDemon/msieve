@@ -9,6 +9,7 @@
 #define PRIMES_COUNT 100000
 #define G 1000
 #define N 1774751
+#define UNUSED(value) (void)value
 
 static inline long long lg(long long p) { return log2l(p) * 100.0; }
 
@@ -30,7 +31,8 @@ auto main() -> int
     // calculate constance
     long long B = 4 * expl(sqrtl(lg(N) * lg(lg(N))) / 2.0);
     long long M = B / 2;
-    
+    long long ln_a = 0.5*(1+lg(N))-lg(M);
+    UNUSED(ln_a);
     // generate ri
     std::srand(std::time(nullptr));
     auto generate_n1_n2 = [](long long Pi, long long &n1, long long &n2) {
