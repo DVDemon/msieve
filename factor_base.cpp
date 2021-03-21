@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 
-#define COUNT 100000
+#define COUNT 500000
 
 auto main() -> int{
     std::vector<long long> primes;
